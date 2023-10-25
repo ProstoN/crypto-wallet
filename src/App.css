@@ -1,19 +1,4 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -22,17 +7,133 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  text-align: center;
+}
+.metamask-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 25%;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.metamask-text {
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 5px;
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.copy-icon {
+  width: 90%;
+  height: 90%;
 }
+
+.copy-container {
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.metamask-fox {
+  width: 90%;
+  height: 90%;
+  margin-bottom: 10px;
+}
+
+.metamask-button {
+  background-color: #1e88e5;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.metamask-button:hover {
+  background-color: #1565c0;
+}
+
+.connect-button {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  border: 2px solid #00c2ff;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.connect-button:hover {
+  border-color: white;
+  color: #00c2ff;
+  cursor: pointer;
+}
+
+.disconnect-button {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  border: 2px solid #00c2ff;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.disconnect-button:hover {
+  border-color: white;
+  color: #00c2ff;
+  cursor: pointer;
+}
+.container {
+  display: flex;
+  align-items: center; /* Центрирование элементов по вертикали */
+  gap: 16px; /* Расстояние между элементами */
+}
+
+.connected-account-text {
+  font-size: 20px;
+}
+
+.balance-amount {
+  font-size: 50px;
+}
+
+.balance-text {
+  font-size: 30px;
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0,0,0,0.7);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+.toast.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
